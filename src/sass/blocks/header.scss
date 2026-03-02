@@ -74,6 +74,11 @@
 			text-transform: uppercase;
 			color: $dark;
 			text-decoration: none;
+			transition: all 0.3s;
+			&:hover {
+				text-decoration: underline;
+				text-decoration-thickness: 1px;
+			}
 		}
 	}
 }
@@ -108,6 +113,7 @@
 			}
 		}
 		&__link {
+			position: relative;
 			font-weight: 400;
 			font-style: normal;
 			font-size: 20px;
@@ -115,6 +121,35 @@
 			text-transform: uppercase;
 			color: $dark;
 			text-decoration: none;
+			transition:
+				width 0.5s,
+				left 0.5s;
+			&::after {
+				content: "";
+				width: 0;
+				height: 0.5px;
+				background-color: $dark;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transition:
+					width 0.5s,
+					left 0.5s;
+			}
+			&:hover {
+				&::after {
+					left: 0;
+					width: 100%;
+					background-color: $dark;
+				}
+			}
+			&--active {
+				&::after {
+					left: 0;
+					width: 100%;
+					background-color: $dark;
+				}
+			}
 		}
 		&__menu {
 			display: none;
@@ -122,6 +157,25 @@
 	}
 	.burger {
 		visibility: hidden;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.header {
+		&__logo {
+			transition: scale 0.5s;
+			&:hover {
+				scale: 1.02;
+			}
+		}
+		&__icons {
+			a {
+				transition: color 0.3s;
+				&:hover {
+					color: $ceramic;
+				}
+			}
+		}
 	}
 }
 

@@ -180,6 +180,25 @@
 		&__links {
 			margin-top: 0;
 		}
+		&__link {
+			a {
+				transition: all 0.3s;
+				&:hover {
+					text-decoration: underline;
+					text-decoration-thickness: 1px;
+				}
+			}
+		}
+		&__social {
+			&-block {
+				a {
+					transition: scale 0.3s;
+					&:hover {
+						scale: 1.15;
+					}
+				}
+			}
+		}
 	}
 }
 
