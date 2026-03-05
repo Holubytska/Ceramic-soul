@@ -55,10 +55,12 @@ try {
 		tab.addEventListener("click", () => {
 			// Удаляем активный класс у всех табов и контента
 			tabs.forEach((t) => t.classList.remove("catalog__tab_active"));
+			tabs.forEach((t) => t.setAttribute("aria-selected", false));
 			contents.forEach((c) => (c.style.display = "none"));
 
 			// Добавляем активный класс к нажатому табу и показываем соответствующий контент
 			tab.classList.add("catalog__tab_active");
+			tab.setAttribute("aria-selected", true);
 			contents[index].style.display = "flex";
 		});
 	});
@@ -136,20 +138,20 @@ try {
 					form.reset();
 				});
 		});
-		// .onSuccess((event) => {
-		// 	const form = event.currentTarget;
-		// 	const formData = new FormData(form);
+	// .onSuccess((event) => {
+	// 	const form = event.currentTarget;
+	// 	const formData = new FormData(form);
 
-		// 	fetch("https://jsonplaceholder.typicode.com/posts", {
-		// 		method: "POST",
-		// 		body: formData,
-		// 	})
-		// 		.then((res) => res.json())
-		// 		.then((data) => {
-		// 			console.log("Success", data);
-		// 			form.reset();
-		// 		});
-		// });
+	// 	fetch("https://jsonplaceholder.typicode.com/posts", {
+	// 		method: "POST",
+	// 		body: formData,
+	// 	})
+	// 		.then((res) => res.json())
+	// 		.then((data) => {
+	// 			console.log("Success", data);
+	// 			form.reset();
+	// 		});
+	// });
 } catch (e) { }
 
 try {
@@ -199,18 +201,18 @@ try {
 					form.reset();
 				});
 		});
-		// .onSuccess((event) => {
-		// 	const form = event.currentTarget;
-		// 	const formData = new FormData(form);
+	// .onSuccess((event) => {
+	// 	const form = event.currentTarget;
+	// 	const formData = new FormData(form);
 
-		// 	fetch("https://jsonplaceholder.typicode.com/posts", {
-		// 		method: "POST",
-		// 		body: formData,
-		// 	})
-		// 		.then((res) => res.json())
-		// 		.then((data) => {
-		// 			console.log("Success", data);
-		// 			form.reset();
-		// 		});
-		// });
+	// 	fetch("https://jsonplaceholder.typicode.com/posts", {
+	// 		method: "POST",
+	// 		body: formData,
+	// 	})
+	// 		.then((res) => res.json())
+	// 		.then((data) => {
+	// 			console.log("Success", data);
+	// 			form.reset();
+	// 		});
+	// });
 } catch (e) { }

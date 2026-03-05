@@ -13,14 +13,17 @@
 
 				<h1 class="title-h1 catalog__title">our pottery</h1>
 
-				<div class="catalog__tabs">
-					<button class="catalog__tab catalog__tab_active">for tea</button>
-					<button class="catalog__tab">for kitchen</button>
-					<button class="catalog__tab">for plants</button>
+				<div role="tablist" aria-label="Goods categories tabs" class="catalog__tabs">
+					<button aria-selected="true" aria-controls="panel-1" id="tab-1" role="tab"
+						class="catalog__tab catalog__tab_active">for tea</button>
+					<button aria-selected="false" aria-controls="panel-2" id="tab-2" role="tab" class="catalog__tab">for
+						kitchen</button>
+					<button aria-selected="false" aria-controls="panel-3" id="tab-3" role="tab" class="catalog__tab">for
+						plants</button>
 				</div>
 
 				<div class="catalog__content">
-					<div class="catalog__content-item">
+					<div id="panel-1" role="tabpanel" aria-labelledby="tab-1" class="catalog__content-item">
 						<div class="catalog__card">
 							<img src="/src/img/form/tea.jpg" alt="tea" class="catalog__card-img" />
 							<div class="catalog__card-info">
@@ -57,7 +60,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="catalog__content-item">
+					<div id="panel-2" role="tabpanel" aria-labelledby="tab-2" class="catalog__content-item">
 						<div class="catalog__card">
 							<img src="/src/img/works/tea-3.jpg" alt="tea" class="catalog__card-img" />
 							<div class="catalog__card-info">
@@ -73,7 +76,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="catalog__content-item">
+					<div id="panel-3" role="tabpanel" aria-labelledby="tab-3" class="catalog__content-item">
 						<div class="catalog__card">
 							<img src="/src/img/works/tea-1.jpg" alt="tea" class="catalog__card-img" />
 							<div class="catalog__card-info">
